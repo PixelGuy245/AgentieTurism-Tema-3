@@ -5,7 +5,7 @@
 
 int Tranzactie::numar_total_tranzactii = 0;
 
-Tranzactie::Tranzactie(const std::string& data, int suma, const Turist& t, const Serviciu* serv) 
+Tranzactie::Tranzactie(const std::string& data, double suma, const Turist& t, const Serviciu* serv) 
     : data_tranzactie(data), suma_tranzactie(suma), beneficiar(t) {
     
     if (suma < 0) {
@@ -40,7 +40,7 @@ Serviciu* Tranzactie::getServiciu() const {
     return serviciul_ales;
 }
 
-int Tranzactie::getSumaTranzactie() const {
+double Tranzactie::getSumaTranzactie() const {
     return suma_tranzactie;
 }
 
@@ -61,7 +61,7 @@ void Tranzactie::setServiciu(const Serviciu* serv) {
     serviciul_ales = serv ? serv->clone() : nullptr; 
 }
 
-void Tranzactie::setSumaTranzactie(int suma){
+void Tranzactie::setSumaTranzactie(double suma){
     suma_tranzactie = suma;
 }
 

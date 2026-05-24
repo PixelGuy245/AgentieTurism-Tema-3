@@ -7,13 +7,13 @@
 class Tranzactie {
 private:
     std::string data_tranzactie;
-    int suma_tranzactie;
+    double suma_tranzactie;
     Turist beneficiar;
     Serviciu* serviciul_ales;
     static int numar_total_tranzactii;
 
 public:
-    Tranzactie(const std::string& data, int suma, const Turist& turist, const Serviciu* serv);
+    Tranzactie(const std::string& data, double suma, const Turist& turist, const Serviciu* serv);
 
     Tranzactie(const Tranzactie& other);
 
@@ -28,13 +28,13 @@ public:
     Tranzactie& operator=(Tranzactie other);
 
     std::string getDataTranzactie() const;
-    int getSumaTranzactie() const; 
+    double getSumaTranzactie() const; 
     Serviciu* getServiciu() const; 
     Turist getTurist() const; 
     static int getNrTranzactii();
 
     void setDataTranzactie(const std::string& data);
-    void setSumaTranzactie(int suma);
+    void setSumaTranzactie(double suma);
     void setServiciu(const Serviciu* serv);
     void setTurist(const Turist& turist);
 
